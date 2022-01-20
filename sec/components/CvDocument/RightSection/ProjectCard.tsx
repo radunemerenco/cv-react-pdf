@@ -101,10 +101,11 @@ const styles = StyleSheet.create({
   },
   rightHeading: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 4
   },
   title: {
-    fontSize: 12,
+    fontSize: 14,
   },
   company: {
     fontSize: 9,
@@ -114,10 +115,11 @@ const styles = StyleSheet.create({
   },
 
   clientProblem: {
-
+    opacity: 0.9
   },
   achievementsContainer: {
-    marginTop: 14
+    marginTop: 14,
+    opacity: 0.7
   },
   bulletPoint: {
     letterSpacing: 8
@@ -127,7 +129,8 @@ const styles = StyleSheet.create({
   },
   skillsContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    opacity: 0.7,
   },
   skill: {
 
