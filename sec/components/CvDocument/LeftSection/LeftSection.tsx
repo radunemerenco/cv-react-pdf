@@ -9,13 +9,13 @@ const LeftSection = () => {
   return (
     <View style={[styles.container]}>
       <View style={styles.profilePictureContainer}>
-      <Image style={styles.profilePicture} src="/images/profile-photo.jpg" />
+      <Image style={styles.profilePicture} src="/images/profile-photo-zoomed.jpg" />
       </View>
       <LeftSectionPanel title={'Contact'}>
         <ContactItem
           icon={(
-            <Svg width="14px" height="14px">
-              <G transform="scale(0.35)">
+            <Svg width="13px" height="13px">
+              <G transform="scale(0.3)">
                 <Path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
                       d="M37.812,40.633 C38.437,40.633 38.958,40.421 39.374,39.998 C39.791,39.575 39.999,39.46 39.999,38.412 L39.999,38.412 L39.999,30.481 C39.999,29.846 39.791,29.317 39.374,28.895 C38.958,28.471 38.437,28.260 37.812,28.260 C35.243,28.260 32.604,27.837 29.895,26.991 C28.923,26.709 28.194,26.885 27.708,27.520 L27.708,27.520 L22.812,32.490 C16.354,29.106 11.458,24.136 8.124,17.579 L8.124,17.579 L13.20,12.609 C13.645,11.975 13.819,11.234 13.541,10.388 C12.638,7.850 12.187,5.136 12.187,2.246 C12.187,1.611 11.979,1.82 11.562,0.659 C11.145,0.236 10.624,0.24 9.999,0.24 L9.999,0.24 L2.187,0.24 C1.562,0.24 1.41,0.236 0.624,0.659 C0.208,1.82 0.0,1.611 0.0,2.246 C0.0,12.891 3.680,21.950 11.41,29.423 C18.402,36.896 27.326,40.633 37.812,40.633 Z"/>
               </G>
@@ -48,7 +48,6 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'Cluj-Napoca, Romania'}
-          link={'https://goo.gl/maps/BrtpqfBHaHDaBXPF8'}
         />
 
         <ContactItem
@@ -100,7 +99,7 @@ const LeftSection = () => {
       <LeftSectionPanel title="Education">
         <Text contrast isBold>Technical University of Moldova</Text>
         <Text contrast>BA in Computer Science</Text>
-        <Text contrast>Chisinau 2011 - 2015</Text>
+        <Text contrast>Chisinau, 2011 - 2015</Text>
       </LeftSectionPanel>
     </View>
   )

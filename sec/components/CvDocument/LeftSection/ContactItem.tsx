@@ -5,7 +5,7 @@ import Text from "../elements/Text";
 interface ContactItemProps {
   icon: ReactNode;
   text: ReactNode;
-  link: string;
+  link?: string;
 }
 
 const ContactItem: React.FC<ContactItemProps> = ({
@@ -13,15 +13,13 @@ const ContactItem: React.FC<ContactItemProps> = ({
   text,
   link,
 }) => {
-  const textElement = <Text contrast style={styles.text}>{text}</Text>;
-
   const textElementToRender = link
     ? (
       <Link src={link}>
-        {textElement}
+        <Text contrast style={styles.linkText}>{text}</Text>
       </Link>
     )
-    : textElement;
+    : <Text contrast>{text}</Text>;
 
   return (
     <View style={styles.container}>
@@ -45,7 +43,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: 10,
   },
-  text: {
+  linkText: {
     // textDecoration: 'none', doesn't work. The line should not be displayed
     textDecoration: 'line-through underline',
   }
