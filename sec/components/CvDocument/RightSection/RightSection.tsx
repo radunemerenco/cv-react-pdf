@@ -15,34 +15,36 @@ const titleItems = [
 const RightSection = () => {
   return (
     <View style={[styles.container]}>
-      <Text style={styles.name}>Radu Nemerenco</Text>
-      <View style={styles.titleContainer}>
-        {titleItems.map((titleItem, index) => {
-          return (
-            <View key={titleItem} style={styles.titleItemContainer}>
-              {!!index && <Text style={styles.titleSeparator}>•</Text>}
-              <Text style={styles.titleItem}>{titleItem}</Text>
-            </View>
-          )
-        })}
+      <View style={styles.header}>
+        <Text style={styles.name}>Radu Nemerenco</Text>
+        <View style={styles.titleContainer}>
+          {titleItems.map((titleItem, index) => {
+            return (
+              <View key={titleItem} style={styles.titleItemContainer}>
+                {!!index && <Text style={styles.titleSeparator}>•</Text>}
+                <Text style={styles.titleItem}>{titleItem}</Text>
+              </View>
+            )
+          })}
+        </View>
       </View>
 
       <Hr />
 
       <Text style={styles.aboutMeTitle}>About Me</Text>
-      <Text style={styles.aboutMeDescription}>I am a consultant with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work, using my expertise, skills and passion to identify & implement clients' needs with regards to their software solutions.</Text>
+      <Text style={styles.aboutMeDescription}>I am a developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text></Text>
+      <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients’ needs with regards to their software solutions.</Text>
       <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
 
       <Hr />
 
-      <Text style={styles.workExperience}>Work</Text>
-      <Text style={styles.workExperience}>Experience</Text>
+      <Text style={styles.workExperience}>Work Experience</Text>
 
       <ProjectCard
         projectName={'L20 - F4ID'}
         from={'Sep 2021'}
-        to={'Now'}
-        title={'Senior JavaScript Fulstack Developer'}
+        to={'Present'}
+        title={'Senior JavaScript Fullstack Developer'}
         company={'XoomWorks'}
         clientProblem={'The client, a UK based Startup backed by a successful NPO had issues with shady, evasive, misleading and purposefully unclear legal processes which lead to millions of dollars lost in the charity donation process.'}
         achievements={[
@@ -202,6 +204,9 @@ const styles = StyleSheet.create({
     padding: 15,
     flex: 1
   },
+  header: {
+    alignItems: 'center'
+  },
   name: {
     fontSize: 32,
     textTransform: 'uppercase',
@@ -231,11 +236,11 @@ const styles = StyleSheet.create({
   aboutMeDescription: {
     fontSize: 11,
     opacity: 0.7,
-    marginTop: 3
+    marginTop: 2,
+    marginBottom: 3,
   },
 
   workExperience: {
-    fontWeight: 'black',
     textTransform: 'uppercase',
     fontSize: 14,
   },

@@ -31,20 +31,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <View style={styles.container} wrap={false}>
-      <View style={styles.leftColumn}>
-        <Text style={styles.projectName}>{projectName}</Text>
-        <Text style={styles.period}>{from} - {to}</Text>
-      </View>
       <View style={rightColumnStyle}>
         <View style={styles.timelineLine} />
         <View style={styles.timelineMarker} />
         <View style={styles.rightHeading}>
           <Text style={styles.title}>{title} </Text>
-          {!!company && (
-            <Text style={styles.company}><Text style={styles.title}>| </Text>{company}</Text>
-          )}
+          <Text style={styles.period}>{from} - {to}</Text>
         </View>
         <View style={styles.content}>
+          <Text style={styles.projectName}>
+            {projectName}
+            {!!company && ` | ${company}`}
+          </Text>
+
           <Text style={styles.clientProblem}>{clientProblem}</Text>
 
           <View style={styles.achievementsContainer}>
@@ -54,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </View>
 
           <View style={styles.skillsContainer}>
-            <Text style={styles.skill}><Text style={{fontWeight: 'black'}}>Skills: </Text>{skills.map((skill, key) => `${skill}, `)}</Text>
+            <Text style={styles.skill}>Skills: {skills.map((skill, key) => `${skill}, `)}</Text>
           </View>
         </View>
       </View>
@@ -66,12 +65,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
   },
-  leftColumn: {
-    width: '25%',
-    paddingRight: 10,
-    alignItems: 'flex-end',
-    paddingVertical: 8,
-  },
+  // leftColumn: {
+  //   width: '25%',
+  //   paddingRight: 10,
+  //   alignItems: 'flex-end',
+  //   paddingVertical: 8,
+  // },
   rightColumn: {
     flex: 1,
     paddingLeft: 10,
@@ -81,44 +80,46 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0,
     top: 13,
-    bottom: -10,
+    bottom: -12,
     width: 1,
     backgroundColor: '#d4d4d4',
   },
   timelineMarker: {
     position: 'absolute',
-    width: 11,
-    height: 11,
+    width: 9,
+    height: 9,
     backgroundColor: 'rgb(74, 74, 74)',
-    borderRadius: 16,
-    left: -5,
-    top: 10,
+    borderRadius: 9,
+    left: -4,
+    top: 12,
   },
   projectName: {
-    fontSize: 12,
+    fontSize: 10,
+    marginBottom: 5
   },
   period: {
-    fontSize: 9,
+    fontSize: 10,
     opacity: 0.8
   },
   rightHeading: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     marginBottom: 4,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
   },
   title: {
     fontSize: 14,
   },
-  company: {
-    fontSize: 9,
-  },
+  // company: {
+  //   fontSize: 9,
+  // },
   content: {
     minHeight: 100
   },
 
   clientProblem: {
-    opacity: 0.9
+    opacity: 0.7
   },
   achievementsContainer: {
     marginTop: 14,
