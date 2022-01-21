@@ -26,4 +26,5 @@ const defaultStyle = StyleSheet.create({
     fontSize: 10
   },
 });
+
 export default Text;
