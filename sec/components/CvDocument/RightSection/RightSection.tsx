@@ -14,12 +14,10 @@ const titleItems = [
 // "JavaScript, NodeJS, PostgreSQL, ReactJS, Redux, Docker, AWS, Jenkins CI/CD, GitHub, Jira".split(', ').map(i => `'${i}'`).join(', ')
 
 export interface RightSectionProps {
-  enabledProjects: EnabledProjects,
+  projects: ProjectCardProps[],
 }
 
-const RightSection: React.FC<RightSectionProps> = ({ enabledProjects }) => {
-  const projects: ProjectCardProps[] = enabledProjects.map(projectName => projectsByName[projectName]);
-
+const RightSection: React.FC<RightSectionProps> = ({ projects }) => {
   return (
     <View style={[styles.container]}>
       <View style={styles.header}>

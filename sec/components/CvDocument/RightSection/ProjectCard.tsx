@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     letterSpacing: 8
   },
   achievement: {
-    marginBottom: 14,
+    marginBottom: 5,
   },
   skillsContainer: {
     flexDirection: 'row',
