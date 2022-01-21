@@ -39,8 +39,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <View style={styles.timelineLine} />
         <View style={styles.timelineMarker} />
         <View style={styles.rightHeading}>
-          <Text style={styles.title}>{title} | </Text>
-          <Text style={styles.company}>{company}</Text>
+          <Text style={styles.title}>{title} </Text>
+          {!!company && (
+            <Text style={styles.company}><Text style={styles.title}>| </Text>{company}</Text>
+          )}
         </View>
         <View style={styles.content}>
           <Text style={styles.clientProblem}>{clientProblem}</Text>
@@ -102,7 +104,8 @@ const styles = StyleSheet.create({
   rightHeading: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 4
+    marginBottom: 4,
+    flexWrap: 'wrap'
   },
   title: {
     fontSize: 14,
