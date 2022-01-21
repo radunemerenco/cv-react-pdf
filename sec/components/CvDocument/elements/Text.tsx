@@ -1,15 +1,21 @@
 import ReactPDF, {StyleSheet, Text as PdfText} from '@react-pdf/renderer';
+import type {Style} from '@react-pdf/types';
 import React from "react";
 
 interface TextProps extends ReactPDF.TextProps {
   contrast?: boolean;
+  isBold?: boolean;
 }
 
-const Text: React.FC<TextProps> = ({ contrast, style, ...props}) => {
-  const defaultStylesInternal = {...defaultStyle.text};
+const Text: React.FC<TextProps> = ({ contrast, isBold, style, ...props}) => {
+  const defaultStylesInternal: Style = {...defaultStyle.text};
 
   if (contrast) {
     defaultStylesInternal.color = '#FFF';
+  }
+
+  if (isBold) {
+    defaultStylesInternal.fontWeight = 'black'
   }
 
   const styles = style
