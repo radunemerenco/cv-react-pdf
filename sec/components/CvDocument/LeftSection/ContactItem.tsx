@@ -13,7 +13,7 @@ const ContactItem: React.FC<ContactItemProps> = ({
   text,
   link,
 }) => {
-  const textElement = <Text contrast>{text}</Text>;
+  const textElement = <Text contrast style={styles.text}>{text}</Text>;
 
   const textElementToRender = link
     ? (
@@ -44,6 +44,10 @@ const styles = StyleSheet.create({
     height: 14,
     alignItems: 'center',
     marginRight: 10,
+  },
+  text: {
+    // textDecoration: 'none', doesn't work. The line should not be displayed
+    textDecoration: 'line-through underline',
   }
 })
 
