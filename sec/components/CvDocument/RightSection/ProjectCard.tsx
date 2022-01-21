@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </View>
 
           <View style={styles.skillsContainer}>
-            <Text style={styles.skill}>Skills: {skills.map((skill, key) => `${skill}, `)}</Text>
+            <Text style={styles.skill}>Skills: {skills.join(', ')}</Text>
           </View>
         </View>
       </View>

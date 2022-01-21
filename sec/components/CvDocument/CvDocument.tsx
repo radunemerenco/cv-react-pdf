@@ -28,7 +28,10 @@ const CvDocument = () => {
     <Document>
       <Page size="A4" style={styles.page}>
         <LeftSection/>
-        <RightSection projects={projects}/>
+        <RightSection
+          projects={projects}
+          workExperienceTitle="Work Experience"
+        />
       </Page>
     </Document>
   );

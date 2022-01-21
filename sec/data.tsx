@@ -124,7 +124,7 @@ export const projectsByName = {
     projectName: 'Yload',
     from: 'Oct 2019',
     to: 'Oct 2021',
-    title: 'Senior Software Architect',
+    title: 'Senior JavaScript Architect',
     company: 'Yload Global',
     clientProblem: 'The client, a successful startup in the logistics field, was losing significant amounts of money and falling behind the competition due to lacking expertise in organizing the overall development process of the team.',
     achievements: [

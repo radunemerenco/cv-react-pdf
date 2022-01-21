@@ -14,10 +14,11 @@ const titleItems = [
 // "JavaScript, NodeJS, PostgreSQL, ReactJS, Redux, Docker, AWS, Jenkins CI/CD, GitHub, Jira".split(', ').map(i => `'${i}'`).join(', ')
 
 export interface RightSectionProps {
-  projects: ProjectCardProps[],
+  projects: ProjectCardProps[];
+  workExperienceTitle: string;
 }
 
-const RightSection: React.FC<RightSectionProps> = ({ projects }) => {
+const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle }) => {
   return (
     <View style={[styles.container]}>
       <View style={styles.header}>
@@ -37,13 +38,13 @@ const RightSection: React.FC<RightSectionProps> = ({ projects }) => {
       <Hr />
 
       <Text style={styles.aboutMeTitle}>About Me</Text>
-      <Text style={styles.aboutMeDescription}>I am a developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text></Text>
+      <Text style={styles.aboutMeDescription}>I am a senior ReactJS developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work</Text>
       <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients’ needs with regards to their software solutions.</Text>
       <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
 
       <Hr />
 
-      <Text style={styles.workExperience}>Work Experience</Text>
+      <Text style={styles.workExperience}>{workExperienceTitle}</Text>
 
       {projects.map(project => <ProjectCard key={project.projectName} {...project} />)}
     </View>
