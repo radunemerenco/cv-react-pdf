@@ -2,7 +2,7 @@ import React, {ReactNode} from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";
 import Text from "../elements/Text";
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   projectName: string;
   from: string;
   to: string;
