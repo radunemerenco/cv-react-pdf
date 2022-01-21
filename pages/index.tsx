@@ -4,13 +4,32 @@ import Image from 'next/image'
 import {PDFViewer} from "@react-pdf/renderer";
 import styles from '../styles/Home.module.css'
 import CvDocument from "../sec/components/CvDocument";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
+import CvDocumentOnePage from "../sec/components/CvDocument/CvDocumentOnePage";
 
 const Home: NextPage = () => {
-  const [showPdf, setShowPdf] = useState(false);
-  useEffect(() => {
-    setShowPdf(true)
-  }, [])
+  const [showFullPdf, setShowFullPdf] = useState(false);
+  const [showOnePagePdf, setShowOnePagePdf] = useState(false);
+  // useEffect(() => {
+  //   setShowFullPdf(true)
+  // }, [])
+
+  const cvDocumentElement = useMemo(() => {
+    if (showFullPdf) {
+      return <CvDocument />;
+    }
+
+    if (showOnePagePdf) {
+      return <CvDocumentOnePage />
+    }
+
+    return null;
+  }, [showFullPdf, showOnePagePdf]);
+
+  const handleCloseClick = () => {
+    setShowFullPdf(false);
+    setShowOnePagePdf(false);
+  }
 
   return (
     <div className={styles.container}>
@@ -25,12 +44,32 @@ const Home: NextPage = () => {
           Welcome to my CV website
         </h1>
 
-        {showPdf && (
-          <section style={{position: 'fixed', width: '100vw', height: '100vh'}}>
+        {!!cvDocumentElement && (
+          <div style={{position: 'fixed', width: '100vw', height: '100vh'}}>
             <PDFViewer style={{position: 'absolute', width: '100vw', height: '100vh'}}>
-              <CvDocument />
+              {cvDocumentElement}
             </PDFViewer>
-          </section>
+            <a
+              style={{
+                position: "fixed",
+                bottom: 15,
+                right: 15,
+                width: 30,
+                height: 30,
+                borderRadius: 20,
+                background: '#c2c2c2',
+                color: '#2a2a2a',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: "center",
+                cursor: "pointer"
+              }}
+              role={"button"}
+              onClick={handleCloseClick}
+            >
+              X
+            </a>
+          </div>
         )}
         <p className={styles.description}>
           Get started by editing{' '}
@@ -38,33 +77,23 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a
+            onClick={() => setShowOnePagePdf(true)}
+            className={styles.card}
+          >
+            <h2>One Page CV &rarr;</h2>
+            <p>This is the One Page CV - short version.</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            onClick={() => setShowFullPdf(true)}
             className={styles.card}
+            role={"button"}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Full CV &rarr;</h2>
+            <p>This is the full version of the CV.</p>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 
