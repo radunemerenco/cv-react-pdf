@@ -29,7 +29,8 @@ const defaultStyle = StyleSheet.create({
   text: {
     fontFamily: 'Lato',
     color: '#242424',
-    fontSize: 9
+    fontSize: 9,
+    textAlign: 'justify'
   },
 });
 
