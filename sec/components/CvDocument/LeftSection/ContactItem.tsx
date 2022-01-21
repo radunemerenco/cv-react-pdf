@@ -1,22 +1,34 @@
 import React, {ReactNode} from "react";
-import {StyleSheet, View} from "@react-pdf/renderer";
+import {StyleSheet, View, Link} from "@react-pdf/renderer";
 import Text from "../elements/Text";
 
 interface ContactItemProps {
   icon: ReactNode;
-  text: string;
+  text: ReactNode;
+  link: string;
 }
 
 const ContactItem: React.FC<ContactItemProps> = ({
   icon,
   text,
+  link,
 }) => {
+  const textElement = <Text contrast>{text}</Text>;
+
+  const textElementToRender = link
+    ? (
+      <Link src={link}>
+        {textElement}
+      </Link>
+    )
+    : textElement;
+
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
         {icon}
       </View>
-      <Text contrast>{text}</Text>
+      {textElementToRender}
     </View>
   )
 }

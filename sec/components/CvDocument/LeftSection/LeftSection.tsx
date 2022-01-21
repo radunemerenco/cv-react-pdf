@@ -1,5 +1,5 @@
-import {Image, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
-import React, {ReactNode} from "react";
+import {Image, Link, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
+import React from "react";
 import Text from "../elements/Text";
 import LeftSectionPanel from "./LeftSectionPanel";
 import SkillItem from "./SkillItem";
@@ -8,7 +8,9 @@ import ContactItem from "./ContactItem";
 const LeftSection = () => {
   return (
     <View style={[styles.container]}>
-      <Image style={styles.profilePicture} src="/images/profile-photo.jpeg" />
+      <View style={styles.profilePictureContainer}>
+      <Image style={styles.profilePicture} src="/images/profile-photo.jpg" />
+      </View>
       <LeftSectionPanel title={'Contact'}>
         <ContactItem
           icon={(
@@ -20,18 +22,7 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'(+40) 751 077 097'}
-        />
-
-        <ContactItem
-          icon={(
-            <Svg width="12px" height="14px">
-              <G transform="scale(0.25)">
-                <Path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                      d="M31.885,27.771 C30.662,31.591 29.321,34.956 27.864,37.869 C26.406,40.781 24.713,43.741 22.784,46.749 C20.856,49.757 19.516,51.786 18.764,52.836 C18.11,53.887 17.400,54.698 16.929,55.271 L12.697,49.542 C9.875,45.627 7.54,40.519 4.232,34.217 C1.410,27.914 0.0,22.328 0.0,17.459 C0.0,12.685 1.669,8.626 5.8,5.284 C8.347,1.942 12.321,0.271 16.929,0.271 C21.538,0.271 25.489,1.942 28.781,5.284 C32.73,8.626 33.719,12.685 33.719,17.459 C33.719,20.514 33.107,23.952 31.885,27.771 ZM22.502,12.16 C20.950,10.393 19.93,9.581 16.929,9.581 C14.766,9.581 12.885,10.393 11.286,12.16 C9.687,13.639 8.888,15.549 8.888,17.745 C8.888,19.941 9.687,21.827 11.286,23.403 C12.885,24.978 14.766,25.766 16.929,25.766 C19.93,25.766 20.974,25.2 22.573,23.474 C24.78,21.851 24.830,19.941 24.830,17.745 C24.830,15.549 24.54,13.639 22.502,12.16 Z"/>
-              </G>
-            </Svg>
-          )}
-          text={'Cluj-Napoca, Romania'}
+          link={'tel:+40751077097'}
         />
 
         <ContactItem
@@ -44,6 +35,20 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'radu@nemerenco.com'}
+          link={'mailto:radu@nemerenco.com'}
+        />
+
+        <ContactItem
+          icon={(
+            <Svg width="9px" height="14px">
+              <G transform="scale(0.25)">
+                <Path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                      d="M31.885,27.771 C30.662,31.591 29.321,34.956 27.864,37.869 C26.406,40.781 24.713,43.741 22.784,46.749 C20.856,49.757 19.516,51.786 18.764,52.836 C18.11,53.887 17.400,54.698 16.929,55.271 L12.697,49.542 C9.875,45.627 7.54,40.519 4.232,34.217 C1.410,27.914 0.0,22.328 0.0,17.459 C0.0,12.685 1.669,8.626 5.8,5.284 C8.347,1.942 12.321,0.271 16.929,0.271 C21.538,0.271 25.489,1.942 28.781,5.284 C32.73,8.626 33.719,12.685 33.719,17.459 C33.719,20.514 33.107,23.952 31.885,27.771 ZM22.502,12.16 C20.950,10.393 19.93,9.581 16.929,9.581 C14.766,9.581 12.885,10.393 11.286,12.16 C9.687,13.639 8.888,15.549 8.888,17.745 C8.888,19.941 9.687,21.827 11.286,23.403 C12.885,24.978 14.766,25.766 16.929,25.766 C19.93,25.766 20.974,25.2 22.573,23.474 C24.78,21.851 24.830,19.941 24.830,17.745 C24.830,15.549 24.54,13.639 22.502,12.16 Z"/>
+              </G>
+            </Svg>
+          )}
+          text={'Cluj-Napoca, Romania'}
+          link={'https://goo.gl/maps/BrtpqfBHaHDaBXPF8'}
         />
 
         <ContactItem
@@ -56,6 +61,7 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'in/radunemerenco'}
+          link={'www.linkedin.com/in/radunemerenco'}
         />
 
         <ContactItem
@@ -67,7 +73,8 @@ const LeftSection = () => {
               </G>
             </Svg>
           )}
-          text={'r.nemerenco'}
+          text={'Radu Nemerenco'}
+          link={'skype:r.nemerenco?chat'}
         />
       </LeftSectionPanel>
 
@@ -91,13 +98,9 @@ const LeftSection = () => {
       </LeftSectionPanel>
 
       <LeftSectionPanel title="Education">
-        <Text contrast>Bachelor in Computer Science</Text>
-        <Text contrast>Technical University of Moldova / Chisinau / 2015</Text>
-      </LeftSectionPanel>
-
-      <LeftSectionPanel title="Other">
-        <Text contrast>Technical writer at Medium</Text>
-        <Text contrast>@radunemerenco</Text>
+        <Text contrast isBold>Technical University of Moldova</Text>
+        <Text contrast>BA in Computer Science</Text>
+        <Text contrast>Chisinau 2011 - 2015</Text>
       </LeftSectionPanel>
     </View>
   )
@@ -105,16 +108,18 @@ const LeftSection = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
     backgroundColor: '#434244',
     width: '30%',
   },
-  profilePicture: {
-    borderRadius: 9999,
-    width: '90%',
+  profilePictureContainer: {
+    width: '93%',
     marginHorizontal: 'auto',
     marginBottom: 10
-  }
+  },
+  profilePicture: {
+    borderRadius: 9999,
+    transform: 'translateY(10p0x)'
+  },
 })
 
 export default LeftSection;

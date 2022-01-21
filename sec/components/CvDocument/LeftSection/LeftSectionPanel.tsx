@@ -21,8 +21,7 @@ const LeftSectionPanel: React.FC<LeftSectionPanelProps> = ({title, children}) =>
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 8,
-    marginBottom: 8
+    margin: '8px 10px'
   },
   heading: {
     paddingBottom: 10,
@@ -30,7 +29,7 @@ const styles = StyleSheet.create({
   },
   headingText: {
     textTransform: 'uppercase',
-    fontSize: 16,
+    fontSize: 14,
   },
   content: {
     paddingTop: 10,

@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
   workExperience: {
     fontWeight: 'black',
     textTransform: 'uppercase',
-    fontSize: 16,
+    fontSize: 14,
   },
 
 })
