@@ -29,10 +29,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     // ? styles.rightColumn
     // : {...styles.rightColumn, paddingBottom: 16};
 
+  const timelineLineStyle = isLastItem
+    ? {...styles.timelineLine, bottom: 5}
+    : styles.timelineLine
+
   return (
     <View style={styles.container} wrap={false}>
       <View style={rightColumnStyle}>
-        <View style={styles.timelineLine} />
+        <View style={timelineLineStyle} />
         <View style={styles.timelineMarker} />
         <View style={styles.rightHeading}>
           <Text style={styles.title}>{title} </Text>
@@ -48,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
           <View style={styles.achievementsContainer}>
             {achievements.map((achievement, key) => (
-              <Text key={key} style={styles.achievement}><Text style={styles.bulletPoint}>{' • '}</Text>{achievement}</Text>
+              <Text key={key} style={styles.achievement}><Text style={styles.bulletPoint}>{'• '}</Text>{achievement}</Text>
             ))}
           </View>
 
@@ -74,13 +78,14 @@ const styles = StyleSheet.create({
   rightColumn: {
     flex: 1,
     paddingLeft: 10,
-    paddingVertical: 8
+    paddingBottom: 8,
+    paddingTop: 12
   },
   timelineLine: {
     position: 'absolute',
     left: 0,
-    top: 13,
-    bottom: -12,
+    top: 16,
+    bottom: -16,
     width: 1,
     backgroundColor: '#d4d4d4',
   },
@@ -91,7 +96,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(74, 74, 74)',
     borderRadius: 9,
     left: -4,
-    top: 12,
+    top: 16,
   },
   projectName: {
     fontSize: 10,
@@ -126,7 +131,8 @@ const styles = StyleSheet.create({
     opacity: 0.7
   },
   bulletPoint: {
-    letterSpacing: 8
+    letterSpacing: 5,
+    textIndent: 10
   },
   achievement: {
     marginBottom: 5,

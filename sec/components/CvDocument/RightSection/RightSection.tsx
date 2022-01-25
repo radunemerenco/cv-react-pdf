@@ -4,6 +4,7 @@ import Text from "../elements/Text";
 import Hr from "./Hr";
 import ProjectCard, {ProjectCardProps} from "./ProjectCard";
 import {EnabledProjects, projectsByName} from "../../../data";
+import Title from "../elements/Title";
 
 const titleItems = [
   'Senior ReactJS Developer',
@@ -37,23 +38,23 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
 
       <Hr />
 
-      <Text style={styles.aboutMeTitle}>About Me</Text>
+      <Title style={styles.aboutMeTitle}>About Me</Title>
       <Text style={styles.aboutMeDescription}>I am a senior ReactJS developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work.</Text>
       <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients’ needs with regards to their software solutions.</Text>
       <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
 
-      <Hr />
+      <Title style={styles.workExperience}>{workExperienceTitle}</Title>
 
-      <Text style={styles.workExperience}>{workExperienceTitle}</Text>
-
-      {projects.map(project => <ProjectCard key={project.projectName} {...project} />)}
+      {projects.map((project, index) => (
+        <ProjectCard key={project.projectName} isLastItem={index === projects.length - 1} {...project} />
+      ))}
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 15,
+    padding: 20,
     flex: 1
   },
   header: {
@@ -81,20 +82,16 @@ const styles = StyleSheet.create({
   },
 
   aboutMeTitle: {
-    textTransform: 'uppercase',
-    fontSize: 14,
     marginBottom: 5
   },
   aboutMeDescription: {
-    fontSize: 11,
     opacity: 0.7,
     marginTop: 2,
     marginBottom: 3,
   },
 
   workExperience: {
-    textTransform: 'uppercase',
-    fontSize: 14,
+    marginTop: 15,
   },
 
 })

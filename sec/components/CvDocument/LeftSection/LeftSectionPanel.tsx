@@ -1,6 +1,7 @@
 import React from "react";
 import {StyleSheet, View} from '@react-pdf/renderer'
 import Text from "../elements/Text";
+import Title from "../elements/Title";
 
 interface LeftSectionPanelProps {
   title: string
@@ -10,7 +11,7 @@ const LeftSectionPanel: React.FC<LeftSectionPanelProps> = ({title, children}) =>
   return (
     <View style={styles.container}>
       <View style={styles.heading}>
-        <Text contrast style={styles.headingText}>{title}</Text>
+        <Title contrast>{title}</Title>
       </View>
       <View style={styles.content}>
         {children}
@@ -26,10 +27,6 @@ const styles = StyleSheet.create({
   heading: {
     paddingBottom: 10,
     borderBottom: '2px solid #8e8e8f'
-  },
-  headingText: {
-    textTransform: 'uppercase',
-    fontSize: 14,
   },
   content: {
     paddingTop: 10,

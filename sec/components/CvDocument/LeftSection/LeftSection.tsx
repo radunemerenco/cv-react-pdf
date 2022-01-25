@@ -9,7 +9,7 @@ const LeftSection = () => {
   return (
     <View style={[styles.container]}>
       <View style={styles.profilePictureContainer}>
-      <Image style={styles.profilePicture} src="/images/profile-photo-zoomed.jpg" />
+        <Image style={styles.profilePicture} src="/images/profile-photo-zoomed.jpg" />
       </View>
       <LeftSectionPanel title={'Contact'}>
         <ContactItem
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   profilePictureContainer: {
     width: '93%',
     marginHorizontal: 'auto',
-    marginBottom: 10
+    marginBottom: 15
   },
   profilePicture: {
     borderRadius: 9999,

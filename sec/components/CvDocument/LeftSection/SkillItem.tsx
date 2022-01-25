@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
   years: {
     width: 50,
+    alignItems: 'flex-end'
   },
 });
 
