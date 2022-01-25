@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     marginVertical: 2
   },
   icon: {
-    width: 14,
-    height: 14,
+    width: 10,
+    height: 10,
     alignItems: 'center',
     marginRight: 10,
   },
