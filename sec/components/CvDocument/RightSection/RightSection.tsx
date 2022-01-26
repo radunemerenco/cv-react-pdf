@@ -3,11 +3,10 @@ import React from "react";
 import Text from "../elements/Text";
 import Hr from "./Hr";
 import ProjectCard, {ProjectCardProps} from "./ProjectCard";
-import {EnabledProjects, projectsByName} from "../../../data";
 import Title from "../elements/Title";
 
 const titleItems = [
-  'Senior ReactJS Developer',
+  'Senior React Fullstack Developer',
   'Contractor',
   'Freelancer',
 ];
