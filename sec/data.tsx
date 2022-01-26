@@ -174,7 +174,7 @@ export const projectsByName = {
     projectName: 'PMS and DMS integration',
     from: 'Apr 2014',
     to: 'Dec 2015',
-    title: 'Fullstack Developer',
+    title: 'JavaScript Fullstack Developer',
     company: 'JMD Planet',
     clientProblem: 'The client, a petrol distribution company, was losing an important amount of information and was struggling with delayed task status updates due to lacking an automated status integrating system.',
     achievements: [
@@ -183,6 +183,6 @@ export const projectsByName = {
       <><Text isBold>Ensured 100% synchronisation accuracy</Text> by replacing entirely the human interaction in the
         process.</>,
     ],
-    skills: ['AngularJS', 'Java', 'Spring Framework', 'REST API', 'SCSS', 'Grunt', 'Bower', 'Twitter Bootstrap', 'Documentum'],
+    skills: ['AngularJS', 'Java', 'Spring Framework', 'REST API', 'SCSS', 'Grunt', 'Bower', 'Twitter Bootstrap', 'EMC Documentum'],
   }
 }
