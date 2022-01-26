@@ -82,7 +82,7 @@ export const projectsByName = {
     projectName: 'Law and mediation for everyone',
     from: 'Jan 2020',
     to: 'Apr 2020',
-    title: 'Senior ReactJS/React Native Developer',
+    title: 'Senior ReactJS Developer',
     // company: 'BeeCoded',
     clientProblem: 'The Client, a public association established for the purpose of defending and promoting the collective rights and interests of individuals, was struggling to reach out to people living in less favored areas like smaller villages, due to lacking a solution that would connect efficient communication, documentation and reporting needs.',
     achievements: [
@@ -111,7 +111,7 @@ export const projectsByName = {
     projectName: 'Sundose',
     from: 'Jan 2019',
     to: 'Apr 2019',
-    title: 'Senior ReactJS/React Native Developer',
+    title: 'Senior React Native Developer',
     company: 'ITCraftShip',
     clientProblem: 'The client, a laboratory that creates nutritional supplements and sells them directly to their clients, was having a hard time matching the custom supplements prepared with the client who ordered them due to lacking an automated system, keeping track manually on excel.',
     achievements: [
@@ -174,7 +174,7 @@ export const projectsByName = {
     projectName: 'PMS and DMS integration',
     from: 'Apr 2014',
     to: 'Dec 2015',
-    title: 'Java & AngularJS Fullstack Developer',
+    title: 'Fullstack Developer',
     company: 'JMD Planet',
     clientProblem: 'The client, a petrol distribution company, was losing an important amount of information and was struggling with delayed task status updates due to lacking an automated status integrating system.',
     achievements: [
