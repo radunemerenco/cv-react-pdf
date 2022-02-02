@@ -73,7 +73,7 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'Radu Nemerenco'}
-          link={'skype:r.nemerenco?chat'}
+          link={'https://join.skype.com/invite/ozQ1Vm45pvMD'}
         />
       </LeftSectionPanel>
 
