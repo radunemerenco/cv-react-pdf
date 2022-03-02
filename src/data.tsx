@@ -156,7 +156,7 @@ export const projectsByName = {
   },
   liteshell: {
     projectName: 'Liteshell (AML Services)',
-    from: 'Dec 2015',
+    from: 'Feb 2016',
     to: 'Dec 2016',
     title: 'AngularJS Developer',
     company: 'Fortech',
@@ -173,7 +173,7 @@ export const projectsByName = {
   pmsDms: {
     projectName: 'PMS and DMS integration',
     from: 'Apr 2014',
-    to: 'Dec 2015',
+    to: 'Feb 2016',
     title: 'JavaScript Fullstack Developer',
     company: 'JMD Planet',
     clientProblem: 'The client, a petrol distribution company, was losing an important amount of information and was struggling with delayed task status updates due to lacking an automated status integrating system.',
