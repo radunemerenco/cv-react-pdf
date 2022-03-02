@@ -101,7 +101,7 @@ export const projectsByName = {
     to: 'Jan 2020',
     title: 'Senior React Native Developer',
     company: 'Innit AS',
-    clientProblem: 'The client, one of the Top 3 sports equipment stores in Norway was losing a significant amount of money due to lacking organization for in store consultants ending with lots of lost customers.',
+    clientProblem: 'The client, one of the Top 3 sports equipment stores in Norway was losing a significant amount of money due to lacking organisation for in store consultants ending with lots of lost customers.',
     achievements: [
       <><Text isBold>Significantly reduced customer waiting time by more than 60%</Text> and <Text>increased the in store sales by more than 30%</Text> by designing a system that will localise the client’s position in store and notify the targeted specialists instantly.</>,
     ],
