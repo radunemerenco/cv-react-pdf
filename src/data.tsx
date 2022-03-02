@@ -126,7 +126,7 @@ export const projectsByName = {
     to: 'Oct 2021',
     title: 'Senior JavaScript Architect',
     company: 'Yload Global',
-    clientProblem: 'The client, a successful startup in the logistics field, was losing significant amounts of money and falling behind the competition due to lacking expertise in organizing the overall development process of the team.',
+    clientProblem: 'The client, a successful startup in the logistics field, was losing significant amounts of money and falling behind the competition due to lacking expertise in organising the overall development process of the team.',
     achievements: [
       <><Text isBold>Secured investments worth over €500k</Text> in less than 6 months by catching potential investors
         trust and attention by building a highly-intuitive MVP.</>,
