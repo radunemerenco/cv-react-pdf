@@ -98,7 +98,7 @@ export const projectsByName = {
   vinnVinn: {
     projectName: 'VinnVinn',
     from: 'Apr 2019',
-    to: 'Jan 2020',
+    to: 'Apr 2020',
     title: 'Senior React Native Developer',
     company: 'Innit AS',
     clientProblem: 'The client, one of the Top 3 sports equipment stores in Norway was losing a significant amount of money due to lacking organisation for in store consultants ending with lots of lost customers.',
