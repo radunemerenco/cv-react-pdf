@@ -3,9 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {PDFViewer} from "@react-pdf/renderer";
 import styles from '../styles/Home.module.css'
-import CvDocument from "../sec/components/CvDocument";
+import CvDocument from "../src/components/CvDocument";
 import React, {useEffect, useMemo, useState} from "react";
-import CvDocumentOnePage from "../sec/components/CvDocument/CvDocumentOnePage";
+import CvDocumentOnePage from "../src/components/CvDocument/CvDocumentOnePage";
 
 const Home: NextPage = () => {
   const [showFullPdf, setShowFullPdf] = useState(false);
