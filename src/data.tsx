@@ -115,7 +115,7 @@ export const projectsByName = {
     company: 'ITCraftShip',
     clientProblem: 'The client, a laboratory that creates nutritional supplements and sells them directly to their clients, was having a hard time matching the custom supplements prepared with the client who ordered them due to lacking an automated system, keeping track manually on excel.',
     achievements: [
-      <><Text isBold>Drastically improved the synchronization process by 3X</Text> by designing a fully functional app to help clients easily order and keep track of their supplements by implementing periodic reminders to take the supplements.</>,
+      <><Text isBold>Drastically improved the synchronisation process by 3X</Text> by designing a fully functional app to help clients easily order and keep track of their supplements by implementing periodic reminders to take the supplements.</>,
       <><Text isBold>Reduced the development costs by 40%</Text> and <Text isBold>doubled the sales</Text> by implementing a rock solid app deployed on iOS, Android and Web that included a subscription based system by estimating the most favorable date to automatically order the packages based on user behavior.</>,
     ],
     skills: ['ReactJS', 'React Native', 'React Animations', 'SCSS', 'PayU'],
