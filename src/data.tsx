@@ -5,8 +5,8 @@ export type EnabledProjects = (keyof typeof projectsByName)[];
 
 export const enabledProjectsAll: EnabledProjects = [
   'l20',
-  'betfair',
   'fdc',
+  'betfair',
   'onPharma',
   'lawAndMediation',
   'vinnVinn',
@@ -25,6 +25,19 @@ export const enabledProjectsOnePage: EnabledProjects = [
 
 
 export const projectsByName = {
+  fdc: {
+    projectName: 'Field Data Capture',
+    from: 'Dev 2021',
+    to: 'Mar 2022',
+    title: 'Senior React Native Developer',
+    company: 'Fortech',
+    clientProblem: 'The client, an US based startup in the construction field, was constantly losing crucial data about the crew and equipment due to lacking an unified tracking system that works even without internet connection.',
+    achievements: [
+      <><Text isBold>Increased the client base by more than 2x</Text> by filling a niche in the market by providing offline capabilities and automatic synchronization on network reachability.</>,
+      <><Text isBold>Reduced development time by more than 5x</Text> and highly increased data quality by designing and implementing a mobile oriented app with much better UX compared to out of the box solutions provided by the SAP platform.</>,
+    ],
+    skills: ['TypeScript', 'React Native', 'React', 'WebPack', 'SAP', 'OAuth', 'Styled Components'],
+  },
   l20: {
     projectName: 'L20 - F4ID',
     from: 'Sep 2021',
@@ -41,7 +54,7 @@ export const projectsByName = {
   },
   betfair: {
     projectName: 'Betfair',
-    from: 'Sep 2020',
+    from: 'May 2020',
     to: 'Sep 2021',
     title: 'Senior React Native Developer',
     company: 'XoomWorks',
@@ -51,19 +64,6 @@ export const projectsByName = {
       <><Text isBold>Solidified the marketing metrics by 100%</Text> by ensuring synchronisation between iOS and Android platforms by implementing the event loggers in a single place.</>,
     ],
     skills: ['TypeScript', 'React Native', 'Apple Pay', 'REST API', 'Google Analytics', 'Target Process'],
-  },
-  fdc: {
-    projectName: 'Field Data Capture',
-    from: 'Jun 2020',
-    to: 'Sep 2020',
-    title: 'Senior React Native Developer',
-    company: 'Fortech',
-    clientProblem: 'The client, an US based startup in the construction field, was constantly losing crucial data about the crew and equipment due to lacking an unified tracking system that works even without internet connection.',
-    achievements: [
-      <><Text isBold>Increased the client base by more than 2x</Text> by filling a niche in the market by providing offline capabilities and automatic synchronization on network reachability.</>,
-      <><Text isBold>Reduced development time by more than 5x</Text> and highly increased data quality by designing and implementing a mobile oriented app with much better UX compared to out of the box solutions provided by the SAP platform.</>,
-    ],
-    skills: ['TypeScript', 'React Native', 'React', 'WebPack', 'SAP', 'OAuth', 'Styled Components'],
   },
   onPharma: {
     projectName: 'OnPharma!',
