@@ -47,7 +47,7 @@ export const projectsByName = {
     clientProblem: 'The client, a UK based Startup backed by a successful NPO had issues with shady, evasive, misleading and purposefully unclear legal processes which lead to millions of dollars lost in the charity donation process.',
     achievements: [
       <><Text isBold>Increased the Face Recognition performance by more than 80% and precision by over 25%</Text> by successfully integrating AWS Rekognition Services.</>,
-      <><Text isBold>Improved performance by 40%</Text> and  by reorganizing the code and designing an ecosystem based on microservices.</>,
+      <><Text isBold>Improved performance by 40%</Text> and  by reorganising the code and designing an ecosystem based on microservices.</>,
       <><Text isBold>Ensured 100% transparency</Text> in the process of distributing money for sold goods by generating in depth reports on all the transactions and presenting them in human-readable insights from the database.</>,
     ],
     skills: ['JavaScript', 'NodeJS', 'PostgreSQL', 'ReactJS', 'Redux', 'Docker', 'AWS', 'Jenkins CI/CD', 'GitHub', 'Jira'],
