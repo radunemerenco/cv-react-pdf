@@ -87,6 +87,8 @@ const LeftSection = () => {
         <SkillItem years={4} name="Unit Testing" />
         <SkillItem years={4} name="PostgresQL" />
         <SkillItem years={3} name="MongoDB" />
+        <SkillItem years={3} name="Java" />
+        <SkillItem years={3} name="Spring Framework" />
         <SkillItem years={7} name="Rest API" />
         <SkillItem years={4} name="GraphQL" />
         <SkillItem years={3} name="WebSocket" />
