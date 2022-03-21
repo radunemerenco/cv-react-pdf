@@ -27,7 +27,7 @@ export const enabledProjectsOnePage: EnabledProjects = [
 export const projectsByName = {
   fdc: {
     projectName: 'Field Data Capture',
-    from: 'Dev 2021',
+    from: 'Dec 2021',
     to: 'Mar 2022',
     title: 'Senior React Native Developer',
     company: 'Fortech',
