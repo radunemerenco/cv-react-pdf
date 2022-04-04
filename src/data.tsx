@@ -41,7 +41,7 @@ export const projectsByName = {
   l20: {
     projectName: 'L20 - F4ID',
     from: 'Sep 2021',
-    to: 'Present',
+    to: 'Apr 2022',
     title: 'Senior JavaScript Fullstack Developer',
     company: 'XoomWorks',
     clientProblem: 'The client, a UK based Startup backed by a successful NPO had issues with shady, evasive, misleading and purposefully unclear legal processes which lead to millions of dollars lost in the charity donation process.',
