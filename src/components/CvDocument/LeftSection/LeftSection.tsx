@@ -1,4 +1,4 @@
-import {Image, Link, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
+import {Image, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
 import React from "react";
 import Text from "../elements/Text";
 import LeftSectionPanel from "./LeftSectionPanel";
@@ -92,6 +92,7 @@ const LeftSection = () => {
         <SkillItem years={7} name="Rest API" />
         <SkillItem years={4} name="GraphQL" />
         <SkillItem years={3} name="WebSocket" />
+        <SkillItem years={1} name="Web3.js" />
         <SkillItem years={5} name="WebPack" />
         <SkillItem years={3} name="Styled Components" />
         <SkillItem years={3} name="Docker" />
